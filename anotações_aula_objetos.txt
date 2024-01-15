@@ -1,0 +1,54 @@
+// Objeto literal
+// Objeto é uma estrutura uma coleção dinâmica de chave e valor.
+
+const lika = {
+    nome: 'Lika R Pamplona',
+    idade: 27,
+};
+
+console.log(lika.nome);
+console.log(lika.idade);
+console.log(lika);
+
+// Incrementando dinâmicamente exemplo:
+
+lika.altura = 1.51;
+
+delete lika.nome; // posso remover
+
+console.log(lika); // posso adicionar
+
+
+
+// No JavaScript dentro do um objeto podemos também utilizar funções, uma função dentro do objeto é chamada de método exemplo:
+
+const pessoa = {
+    nome: 'Lika R Pamplona',
+    idade: 27,
+    descrever: function () {
+        console.log(`Meu nome é ${this.nome} e minha idade é ${this.idade}`)
+    }
+};
+
+pessoa.nome 'Renan';
+pessoa.idade = 30;
+
+pessoa.descrever();
+
+pessoa.descrever = function() {
+    console.log(`Meu nome é ${this.nome}`) // outra forma de substituir a função -descrever:- acima, chamando ela por aqui dessa outra forma.
+}
+
+
+// Acessando os valores do código acima através de uma sitaxe mais dinâmica, sem precisar chamar diretamente pelo nome do objeto pessoa, aqui iremos acessar o atributo do objeto através de um parâmetro em forma de String, exemplo:
+
+const atributo = 'idade';
+
+ console.log(pessoa['nome]); // pode ser atributo, nome e etc.
+
+ pessoa['nome] = 'teste'; // Ex:acesso dinâmico, posso reatribuir também outro valor.
+
+ pessoa.nome = 'teste'; // Ex:acesso direto.
+
+ Obs: são os mesmos códigos só muda a forma de acesso!
+ 
